@@ -1,4 +1,4 @@
--- Building A Business Queries
+-- Building Advanced SQL Queries for Business Applications
 
 -- Step 1: Start with a simple SELECT Query
 SELECT
@@ -13,7 +13,7 @@ WHERE first_name IS NOT NULL AND last_name IS NOT NULL;
 
 -- Step 2: Join the donations table to access donation amounts
 SELECT
-    dn.fist_name AS "First Name",
+    dn.first_name AS "First Name",
     dn.last_name AS "Last Name",
     dn.email AS "Email",
     dt.amount AS "Amount Donated"
@@ -147,7 +147,7 @@ ORDER BY
 LIMIT 10;
 
 
--- Practice Exercise
+-- Challenge problem: Practice Exercise
 -- give all donors who have donated $500+ but we haven't sent a thank-you note
 -- @TODO: your task is to solve the problem above using a "LEFT JOIN"
 -- 1 . grab this code base and dataset from ulem_grant_tracker
@@ -156,13 +156,14 @@ LIMIT 10;
 
 SELECT
      -- all columns
-      dn.first_name AS "First Name"
+        dn.id         AS "Donor ID"
+      ,dn.first_name AS "First Name"
      ,dn.last_name  AS "Last Name"
      ,dn.donor_type AS "Donor Type"
      ,dt.amount     AS "Amount Donated"
      ,pg.description AS "Program Description"
-     ,tyn.notes AS "Thank You Note"
-     ,tyn.sent_date AS "Sent Date"
+     ,tyn.notes
+     ,tyn.sent_date
 
 FROM donors dn
 -- INNER JOIN
@@ -171,9 +172,19 @@ FROM donors dn
          left join public.thank_you_notes tyn on dn.id = tyn.donor_id
 
 WHERE dn.first_name is not null
+        AND dt.amount > 500
+        AND tyn.sent_date is null
 ORDER BY dt.amount DESC
 LIMIT 10;
 
+
+SELECT *
+FROM donors
+WHERE donors.id = 10;
+
+SELECT *
+FROM thank_you_notes
+WHERE donor_id= 10;
 
 
 

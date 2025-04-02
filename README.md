@@ -1,18 +1,55 @@
-## Ulem Grant Tracker Database
+# Ulem Grant Tracker Database System
 
-This is a simple database that stores grant information in a list of dictionaries. 
-Each dictionary represents a single grant with its associated details.
+## Overview
+The ULEM Grants Tracker Database System is a comprehensive solution for managing incoming grants, donors, 
+donations, pledges, tax_receipts, and thank you notes. Users are able to track and manage all aspects of 
+the grant process, starting from generating instance reports, to sending thank you notes and tax receipt to donors.
 
+## Features
+- User-friendly interface for booking concert tickets.
+- Real-time ticket availability updates.
+- Secure and efficient ticket reservation process.
+- Modular design for easy maintenance and scalability.
 
-### Building a Business Query
+## Prerequisites
+- Python 3.8 or higher
+- Required libraries (listed in `requirements.txt`)
 
-#### Step 1: Start with a simple SELECT query
-SELECT
-    donors.first_name AS "First Name",
-    donors.last_name AS "Last Name",
-    donors.email AS "Email"
-FROM donors;
+## Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-repo/concert_ticket_system_2.git
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd concert_ticket_system_2
+    ```
+3. Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
+## Usage
+Run the script using the following command:
+```bash
+python main.py
+```
+
+Follow the on-screen instructions to book tickets or manage the system.
+
+## File Structure
+- `main.py`: Entry point of the application.
+- `requirements.txt`: List of dependencies.
+- Other supporting modules and files.
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Contact
+For questions or support, please contact macueidit@gmail.com.
 
 
 
