@@ -11,6 +11,11 @@ FROM donors
 WHERE first_name IS NOT NULL AND last_name IS NOT NULL;
 
 
+-- Display all donors in our database
+SELECT *
+FROM donors
+WHERE state != 'CA';
+
 -- Step 2: Join the donations table to access donation amounts
 SELECT
     dn.first_name AS "First Name",
@@ -35,7 +40,7 @@ FROM donors
 INNER JOIN donations ON donors.id = donations.id
 WHERE
     donations.amount > 500
-     AND donors.donor_type = 'Individual';
+     AND donors.donor_type = 'individual';
 -- Note: The above query filters for individual donors
 -- who donated more than $500. You can adjust the amount or donor type as needed.
 
@@ -52,7 +57,7 @@ INNER JOIN donations ON donors.id = donations.donor_id
 INNER JOIN thank_you_notes ON donations.id = thank_you_notes.donation_id
 WHERE
     donations.amount > 500
-    AND donors.donor_type = 'Individual';
+    AND donors.donor_type = 'individual';
 
 -- Advanced Query Concepts: Finding Missing Data
 -- 1) Find donors who have donated more than $500 but do not have a thank you note sent
@@ -67,7 +72,7 @@ INNER JOIN donations ON donors.id = donations.donor_id
 LEFT JOIN thank_you_notes ON donations.id = thank_you_notes.donation_id
 WHERE
     donations.amount > 500
-    AND donors.donor_type = 'Individual'
+    AND donors.donor_type = 'individual'
     AND thank_you_notes.sent_date IS NULL; -- This condition filters out those with a sent thank you note
 
 
@@ -84,7 +89,7 @@ INNER JOIN donations ON donors.id = donations.donor_id
 LEFT JOIN thank_you_notes ON donations.id = thank_you_notes.donation_id
 WHERE
     donations.amount > 500
-    AND donors.donor_type = 'Individual'
+    AND donors.donor_type = 'individual'
     AND thank_you_notes.id IS NULL;
 
 
@@ -156,7 +161,7 @@ LIMIT 10;
 
 SELECT
      -- all columns
-        dn.id         AS "Donor ID"
+      dn.id         AS "Donor ID"
       ,dn.first_name AS "First Name"
      ,dn.last_name  AS "Last Name"
      ,dn.donor_type AS "Donor Type"
@@ -170,7 +175,6 @@ FROM donors dn
          inner join donations dt on dn.id = dt.donor_id
          inner join public.programs pg on pg.id = dt.program_id
          left join public.thank_you_notes tyn on dn.id = tyn.donor_id
-
 WHERE dn.first_name is not null
         AND dt.amount > 500
         AND tyn.sent_date is null
@@ -180,11 +184,11 @@ LIMIT 10;
 
 SELECT *
 FROM donors
-WHERE donors.id = 10;
+WHERE donors.id = 4;
 
 SELECT *
 FROM thank_you_notes
-WHERE donor_id= 10;
+WHERE donor_id= 3;
 
 
 

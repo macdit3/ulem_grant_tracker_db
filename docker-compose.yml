@@ -8,11 +8,11 @@ services:
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: ulem_tracker3
+      POSTGRES_DB: ulem_tracker
     ports:
       - "5477:5432"
     volumes:
-      - postgres_data3:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
 
 volumes:
-  postgres_data3:
+  postgres_data:

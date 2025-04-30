@@ -1,89 +1,104 @@
--- Create donors table if it doesn't exist
-CREATE TABLE IF NOT EXISTS donors (
-                                      id SERIAL PRIMARY KEY,
-                                      donor_type VARCHAR(20) NOT NULL,
-                                      first_name VARCHAR(100),
-                                      last_name VARCHAR(100),
-                                      organization_name VARCHAR(200),
-                                      email VARCHAR(255),
-                                      phone VARCHAR(20),
-                                      address_line1 VARCHAR(255),
-                                      address_line2 VARCHAR(255),
-                                      city VARCHAR(100),
-                                      state VARCHAR(100),
-                                      postal_code VARCHAR(20),
-                                      country VARCHAR(100),
-                                      preferred_contact_method VARCHAR(20),
-                                      notes TEXT,
-                                      created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                      updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+create table public.donors
+(
+    id                       serial
+        primary key,
+    donor_type               varchar(20) not null,
+    first_name               varchar(100),
+    last_name                varchar(100),
+    organization_name        varchar(200),
+    email                    varchar(255),
+    phone                    varchar(20),
+    address_line1            varchar(255),
+    address_line2            varchar(255),
+    city                     varchar(100),
+    state                    varchar(100),
+    postal_code              varchar(20),
+    country                  varchar(100),
+    preferred_contact_method varchar(20),
+    notes                    text,
+    created_at               timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at               timestamp with time zone default CURRENT_TIMESTAMP
 );
 
--- Create programs table if it doesn't exist
-CREATE TABLE IF NOT EXISTS programs (
-                                        id SERIAL PRIMARY KEY,
-                                        name VARCHAR(200) NOT NULL,
-                                        description TEXT,
-                                        start_date DATE,
-                                        end_date DATE,
-                                        budget DECIMAL(10,2),
-									    goal_amount DECIMAL(10,2),
-										current_progress DECIMAL(10,2),
-                                        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                        updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+
+create table public.programs
+(
+    id               serial
+        primary key,
+    name             varchar(200) not null,
+    description      text,
+    start_date       date,
+    end_date         date,
+    budget           numeric(10, 2),
+    goal_amount      numeric(10, 2),
+    current_progress numeric(10, 2),
+    created_at       timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at       timestamp with time zone default CURRENT_TIMESTAMP
 );
 
--- Create donations table if it doesn't exist
-CREATE TABLE IF NOT EXISTS donations (
-                                         id SERIAL PRIMARY KEY,
-                                         donor_id INTEGER REFERENCES donors(id),
-                                         program_id INTEGER REFERENCES programs(id),
-                                         amount DECIMAL(10,2) NOT NULL,
-                                         donation_date DATE NOT NULL,
-                                         payment_method VARCHAR(50),
-                                         transaction_id VARCHAR(100),
-                                         is_tax_deductible BOOLEAN DEFAULT FALSE,
-                                         notes TEXT,
-                                         created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                         updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+create table public.donations
+(
+    id                serial
+        primary key,
+    donor_id          integer
+        references public.donors,
+    program_id        integer
+        references public.programs,
+    amount            numeric(10, 2) not null,
+    donation_date     date           not null,
+    payment_method    varchar(50),
+    transaction_id    varchar(100),
+    is_tax_deductible boolean                  default false,
+    notes             text,
+    created_at        timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at        timestamp with time zone default CURRENT_TIMESTAMP
 );
 
--- Create pledges table if it doesn't exist
-CREATE TABLE IF NOT EXISTS pledges (
-                                       id SERIAL PRIMARY KEY,
-                                       donor_id INTEGER REFERENCES donors(id),
-                                       program_id INTEGER REFERENCES programs(id),
-                                       amount DECIMAL(10,2) NOT NULL,
-                                       pledge_date DATE NOT NULL,
-                                       fulfillment_date DATE,
-                                       status VARCHAR(50),
-									   amount_fulfilled DECIMAL(10,2) NOT NULL,
-                                       notes TEXT,
-                                       created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                       updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+create table public.pledges
+(
+    id               serial
+        primary key,
+    donor_id         integer
+        references public.donors,
+    program_id       integer
+        references public.programs,
+    amount           numeric(10, 2) not null,
+    pledge_date      date           not null,
+    fulfillment_date date,
+    status           varchar(50),
+    amount_fulfilled numeric(10, 2) not null,
+    notes            text,
+    created_at       timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at       timestamp with time zone default CURRENT_TIMESTAMP
 );
 
--- Create tax_receipts table if it doesn't exist
-CREATE TABLE IF NOT EXISTS tax_receipts (
-                                            id SERIAL PRIMARY KEY,
-                                            donor_id INTEGER REFERENCES donations(id),
-											year_donated DATE,
-										    total_amount DECIMAL(10,2) NOT NULL,
-                                            generated_date DATE NOT NULL,
-                                            sent_date DATE,
-                                            created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                            updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+create table public.tax_receipts
+(
+    id             serial
+        primary key,
+    donor_id       integer
+        references public.donations,
+    year_donated   date,
+    total_amount   numeric(10, 2) not null,
+    generated_date date           not null,
+    sent_date      date,
+    created_at     timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at     timestamp with time zone default CURRENT_TIMESTAMP
 );
 
--- Create thank_you_notes table if it doesn't exist
-CREATE TABLE IF NOT EXISTS thank_you_notes (
-                                               id SERIAL PRIMARY KEY,
-											   donor_id INTEGER REFERENCES donors(id,
-                                               donation_id INTEGER REFERENCES donations(id),
-                                               sent_date DATE,
-                                               method VARCHAR(50),
-                                               template_used VARCHAR(100),
-                                               notes TEXT,
-                                               created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-                                               updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+create table public.thank_you_notes
+(
+    id            serial
+        primary key,
+    donor_id      integer
+        references public.donors,
+    donation_id   integer
+        references public.donations,
+    sent_date     date,
+    method        varchar(50),
+    template_used varchar(100),
+    notes         text,
+    created_at    timestamp with time zone default CURRENT_TIMESTAMP,
+    updated_at    timestamp with time zone default CURRENT_TIMESTAMP
 );
+
