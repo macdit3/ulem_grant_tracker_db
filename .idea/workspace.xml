@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e418b4bb-7a0e-426a-9f88-0949254a9154" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/ulem_grant_tracker_db.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DDL_of_db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application-features.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assigned-tasks.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock-data-db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_data.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assigned_Queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Assigned_Queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tables_sql_statements.sql" beforeDir="false" afterPath="$PROJECT_DIR$/tables_sql_statements.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +41,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "//wsl.localhost/Ubuntu/home/mac/projects/ulem_grant_tracker_db",
     "node.js.detected.package.eslint": "true",
@@ -84,7 +73,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746034555987</updated>
       <workItem from="1746034557315" duration="733000" />
-      <workItem from="1746035524006" duration="1790000" />
+      <workItem from="1746035524006" duration="2400000" />
+      <workItem from="1746044175746" duration="992000" />
     </task>
     <servers />
   </component>
