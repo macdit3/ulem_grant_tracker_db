@@ -169,7 +169,7 @@ class DonorResponse(DonorBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ProgramBase(BaseModel):
@@ -192,7 +192,7 @@ class ProgramResponse(ProgramBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class DonationBase(BaseModel):
@@ -216,7 +216,7 @@ class DonationResponse(DonationBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class PledgeBase(BaseModel):
@@ -240,7 +240,7 @@ class PledgeResponse(PledgeBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class TaxReceiptBase(BaseModel):
@@ -261,7 +261,7 @@ class TaxReceiptResponse(TaxReceiptBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 class ThankYouNoteBase(BaseModel):
@@ -283,7 +283,7 @@ class ThankYouNoteResponse(ThankYouNoteBase):
     updated_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 
 # Dependency to get DB session
