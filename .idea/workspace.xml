@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e418b4bb-7a0e-426a-9f88-0949254a9154" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ccdfa8d-3898-46d6-8493-2defb06c79a9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ccdfa8d-3898-46d6-8493-2defb06c79a9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/9ccdfa8d-3898-46d6-8493-2defb06c79a9/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/9ccdfa8d-3898-46d6-8493-2defb06c79a9/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +78,7 @@
       <workItem from="1746044175746" duration="5954000" />
       <workItem from="1746050814884" duration="2892000" />
       <workItem from="1746108326068" duration="2133000" />
-      <workItem from="1746110513003" duration="438000" />
+      <workItem from="1746110513003" duration="3063000" />
     </task>
     <servers />
   </component>
