@@ -4,6 +4,7 @@ from datetime import date, datetime
 from typing import List, Optional
 
 import uvicorn
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException, Depends, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
@@ -14,9 +15,11 @@ from sqlalchemy.dialects.postgresql import NUMERIC
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship, Session
 
+# Load environment variables
+load_dotenv()
 
 # Database connection details
-DATABASE_URL = "postgresql://admin:password@localhost:5477/ulem_tracker"
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # Set up SQLAlchemy
 engine = create_engine(DATABASE_URL)
