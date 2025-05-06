@@ -312,6 +312,14 @@ app.add_middleware(
 
 # API Endpoints
 
+# Landing page or home route
+
+@app.get("/")
+def landing_page():
+    return {"message": "Welcome to the ULM tracker API. Please contact Mac. at mac@ulem.org for any questions or issues.", "status": 200}
+
+
+
 # Donors
 @app.post("/donors/", response_model=DonorResponse, tags=["Donors"])
 def create_donor(donor: DonorCreate, db: Session = Depends(get_db)):
