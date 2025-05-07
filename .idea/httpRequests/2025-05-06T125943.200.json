@@ -1,0 +1,67 @@
+[
+  {
+    "donor_id": 1,
+    "program_id": 1,
+    "amount": 500.0,
+    "donation_date": "2023-02-15",
+    "payment_method": "credit_card",
+    "transaction_id": "TXN-123456",
+    "is_tax_deductible": true,
+    "notes": "Monthly recurring donation",
+    "id": 1,
+    "created_at": "2025-05-05T15:43:51.655930Z",
+    "updated_at": "2025-05-05T15:43:51.655930Z"
+  },
+  {
+    "donor_id": 3,
+    "program_id": 2,
+    "amount": 10000.0,
+    "donation_date": "2023-04-10",
+    "payment_method": "check",
+    "transaction_id": "CHK-789012",
+    "is_tax_deductible": true,
+    "notes": "Annual corporate contribution",
+    "id": 2,
+    "created_at": "2025-05-05T15:43:51.655930Z",
+    "updated_at": "2025-05-05T15:43:51.655930Z"
+  },
+  {
+    "donor_id": 2,
+    "program_id": 1,
+    "amount": 250.0,
+    "donation_date": "2023-03-22",
+    "payment_method": "paypal",
+    "transaction_id": "PP-345678",
+    "is_tax_deductible": true,
+    "notes": "First-time donor",
+    "id": 3,
+    "created_at": "2025-05-05T15:43:51.655930Z",
+    "updated_at": "2025-05-05T15:43:51.655930Z"
+  },
+  {
+    "donor_id": 4,
+    "program_id": 4,
+    "amount": 5000.0,
+    "donation_date": "2023-01-30",
+    "payment_method": "wire_transfer",
+    "transaction_id": "WT-901234",
+    "is_tax_deductible": true,
+    "notes": "Specified for senior meal program",
+    "id": 4,
+    "created_at": "2025-05-05T15:43:51.655930Z",
+    "updated_at": "2025-05-05T15:43:51.655930Z"
+  },
+  {
+    "donor_id": 5,
+    "program_id": 3,
+    "amount": 7500.0,
+    "donation_date": "2023-07-15",
+    "payment_method": "check",
+    "transaction_id": "CHK-567890",
+    "is_tax_deductible": true,
+    "notes": "Matching gift program",
+    "id": 5,
+    "created_at": "2025-05-05T15:43:51.655930Z",
+    "updated_at": "2025-05-05T15:43:51.655930Z"
+  }
+]

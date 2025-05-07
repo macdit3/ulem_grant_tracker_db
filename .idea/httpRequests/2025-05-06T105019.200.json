@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Youth Education Initiative",
+    "description": "Providing after-school tutoring and educational resources to underserved communities",
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31",
+    "budget": 125000.0,
+    "goal_amount": 150000.0,
+    "current_progress": 87500.0,
+    "id": 1,
+    "created_at": "2025-05-05T15:43:43.631925Z",
+    "updated_at": "2025-05-05T15:43:43.631925Z"
+  },
+  {
+    "name": "Community Health Outreach",
+    "description": "Mobile health screenings and educational workshops in rural areas",
+    "start_date": "2023-03-15",
+    "end_date": "2023-11-30",
+    "budget": 75000.0,
+    "goal_amount": 100000.0,
+    "current_progress": 62000.0,
+    "id": 2,
+    "created_at": "2025-05-05T15:43:43.631925Z",
+    "updated_at": "2025-05-05T15:43:43.631925Z"
+  },
+  {
+    "name": "Arts for All",
+    "description": "Making arts education accessible to children from low-income families",
+    "start_date": "2023-06-01",
+    "end_date": "2024-05-31",
+    "budget": 50000.0,
+    "goal_amount": 60000.0,
+    "current_progress": 22500.0,
+    "id": 3,
+    "created_at": "2025-05-05T15:43:43.631925Z",
+    "updated_at": "2025-05-05T15:43:43.631925Z"
+  },
+  {
+    "name": "Senior Support Network",
+    "description": "Providing meals, transportation, and companionship to elderly residents",
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31",
+    "budget": 95000.0,
+    "goal_amount": 120000.0,
+    "current_progress": 78000.0,
+    "id": 4,
+    "created_at": "2025-05-05T15:43:43.631925Z",
+    "updated_at": "2025-05-05T15:43:43.631925Z"
+  },
+  {
+    "name": "Environmental Restoration Project",
+    "description": "Restoring local watershed and creating educational nature trails",
+    "start_date": "2023-04-22",
+    "end_date": "2023-10-15",
+    "budget": 85000.0,
+    "goal_amount": 95000.0,
+    "current_progress": 45000.0,
+    "id": 5,
+    "created_at": "2025-05-05T15:43:43.631925Z",
+    "updated_at": "2025-05-05T15:43:43.631925Z"
+  }
+]
