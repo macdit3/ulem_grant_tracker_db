@@ -1,0 +1,67 @@
+[
+  {
+    "donor_id": 4,
+    "program_id": 4,
+    "amount": 10000.0,
+    "pledge_date": "2023-01-15",
+    "fulfillment_date": "2023-01-30",
+    "status": "fulfilled",
+    "amount_fulfilled": 10000.0,
+    "notes": "Fulfilled ahead of schedule",
+    "id": 1,
+    "created_at": "2025-05-05T15:44:00.358708Z",
+    "updated_at": "2025-05-05T15:44:00.358708Z"
+  },
+  {
+    "donor_id": 3,
+    "program_id": 2,
+    "amount": 25000.0,
+    "pledge_date": "2023-03-01",
+    "fulfillment_date": "2023-04-10",
+    "status": "fulfilled",
+    "amount_fulfilled": 25000.0,
+    "notes": "Part of annual giving commitment",
+    "id": 2,
+    "created_at": "2025-05-05T15:44:00.358708Z",
+    "updated_at": "2025-05-05T15:44:00.358708Z"
+  },
+  {
+    "donor_id": 1,
+    "program_id": 5,
+    "amount": 1200.0,
+    "pledge_date": "2023-05-10",
+    "fulfillment_date": null,
+    "status": "pending",
+    "amount_fulfilled": 500.0,
+    "notes": "Monthly installments of $100",
+    "id": 3,
+    "created_at": "2025-05-05T15:44:00.358708Z",
+    "updated_at": "2025-05-05T15:44:00.358708Z"
+  },
+  {
+    "donor_id": 5,
+    "program_id": 3,
+    "amount": 15000.0,
+    "pledge_date": "2023-06-01",
+    "fulfillment_date": "2023-07-15",
+    "status": "partially_fulfilled",
+    "amount_fulfilled": 7500.0,
+    "notes": "Remainder due by year-end",
+    "id": 4,
+    "created_at": "2025-05-05T15:44:00.358708Z",
+    "updated_at": "2025-05-05T15:44:00.358708Z"
+  },
+  {
+    "donor_id": 2,
+    "program_id": 1,
+    "amount": 1000.0,
+    "pledge_date": "2023-02-28",
+    "fulfillment_date": "2023-03-22",
+    "status": "fulfilled",
+    "amount_fulfilled": 1000.0,
+    "notes": "One-time pledge",
+    "id": 5,
+    "created_at": "2025-05-05T15:44:00.358708Z",
+    "updated_at": "2025-05-05T15:44:00.358708Z"
+  }
+]

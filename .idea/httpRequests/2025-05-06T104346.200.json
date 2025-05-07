@@ -1,0 +1,57 @@
+[
+  {
+    "donor_id": 1,
+    "donation_id": 1,
+    "sent_date": "2023-02-16",
+    "method": "email",
+    "template_used": "monthly_donor",
+    "notes": "Personalized with education program updates",
+    "id": 1,
+    "created_at": "2025-05-05T15:44:14.334699Z",
+    "updated_at": "2025-05-05T15:44:14.334699Z"
+  },
+  {
+    "donor_id": 3,
+    "donation_id": 2,
+    "sent_date": "2023-04-12",
+    "method": "mail",
+    "template_used": "corporate_donor",
+    "notes": "Included annual impact report",
+    "id": 2,
+    "created_at": "2025-05-05T15:44:14.334699Z",
+    "updated_at": "2025-05-05T15:44:14.334699Z"
+  },
+  {
+    "donor_id": 2,
+    "donation_id": 3,
+    "sent_date": "2023-03-24",
+    "method": "email",
+    "template_used": "first_time_donor",
+    "notes": "Included welcome packet information",
+    "id": 3,
+    "created_at": "2025-05-05T15:44:14.334699Z",
+    "updated_at": "2025-05-05T15:44:14.334699Z"
+  },
+  {
+    "donor_id": 4,
+    "donation_id": 4,
+    "sent_date": "2023-02-02",
+    "method": "mail",
+    "template_used": "major_donor",
+    "notes": "Hand-signed by executive director",
+    "id": 4,
+    "created_at": "2025-05-05T15:44:14.334699Z",
+    "updated_at": "2025-05-05T15:44:14.334699Z"
+  },
+  {
+    "donor_id": 5,
+    "donation_id": 5,
+    "sent_date": "2023-07-17",
+    "method": "email",
+    "template_used": "corporate_donor",
+    "notes": "Included photo from arts program",
+    "id": 5,
+    "created_at": "2025-05-05T15:44:14.334699Z",
+    "updated_at": "2025-05-05T15:44:14.334699Z"
+  }
+]
